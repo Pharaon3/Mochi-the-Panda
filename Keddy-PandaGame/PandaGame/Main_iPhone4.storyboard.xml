@@ -1,0 +1,999 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="6751" systemVersion="14C1514" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="r0o-Fv-jSX">
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="6736"/>
+    </dependencies>
+    <scenes>
+        <!--Navigation Controller-->
+        <scene sceneID="mqU-RG-CvX">
+            <objects>
+                <navigationController navigationBarHidden="YES" id="r0o-Fv-jSX" sceneMemberID="viewController">
+                    <nil key="simulatedStatusBarMetrics"/>
+                    <nil key="simulatedTopBarMetrics"/>
+                    <simulatedOrientationMetrics key="simulatedOrientationMetrics" orientation="landscapeRight"/>
+                    <simulatedScreenMetrics key="simulatedDestinationMetrics"/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="ZYZ-Qj-riS">
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <connections>
+                        <segue destination="hhE-KI-ils" kind="relationship" relationship="rootViewController" id="jL6-JL-Qhx"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="0mK-qE-VL8" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-1130" y="828"/>
+        </scene>
+        <!--Tap To Start View Controller-->
+        <scene sceneID="1Rt-zj-LzQ">
+            <objects>
+                <viewController storyboardIdentifier="taptostart" useStoryboardIdentifierAsRestorationIdentifier="YES" id="hhE-KI-ils" customClass="PGTapToStartViewController" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="39n-RS-ezc"/>
+                        <viewControllerLayoutGuide type="bottom" id="HAR-va-tLX"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="zhm-ez-l2j">
+                        <rect key="frame" x="0.0" y="0.0" width="480" height="320"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <imageView contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="i_mochi_splash.png" translatesAutoresizingMaskIntoConstraints="NO" id="SIa-IW-bex">
+                                <rect key="frame" x="0.0" y="0.0" width="480" height="320"/>
+                            </imageView>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="i_tap.png" translatesAutoresizingMaskIntoConstraints="NO" id="2Dr-qC-4ON">
+                                <rect key="frame" x="100" y="268" width="300" height="50"/>
+                            </imageView>
+                            <view hidden="YES" contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="FlE-fV-6ul">
+                                <rect key="frame" x="0.0" y="0.0" width="480" height="320"/>
+                                <subviews>
+                                    <view alpha="0.40000000596046448" contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="rle-8q-mds">
+                                        <rect key="frame" x="0.0" y="0.0" width="480" height="320"/>
+                                        <color key="backgroundColor" white="0.0" alpha="1" colorSpace="calibratedWhite"/>
+                                    </view>
+                                    <view contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="Mdz-j8-ckY">
+                                        <rect key="frame" x="65" y="96" width="352" height="94"/>
+                                        <subviews>
+                                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="PKX-pq-qLK">
+                                                <rect key="frame" x="138" y="61" width="75" height="22"/>
+                                                <state key="normal">
+                                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                                </state>
+                                                <connections>
+                                                    <action selector="onOK:" destination="hhE-KI-ils" eventType="touchUpInside" id="2D5-ct-cv2"/>
+                                                </connections>
+                                            </button>
+                                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="i_story_guide.png" translatesAutoresizingMaskIntoConstraints="NO" id="Q2S-fj-Olo">
+                                                <rect key="frame" x="0.0" y="-1" width="352" height="96"/>
+                                            </imageView>
+                                        </subviews>
+                                    </view>
+                                </subviews>
+                            </view>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                    </view>
+                    <navigationItem key="navigationItem" id="sEh-E2-sRH"/>
+                    <simulatedOrientationMetrics key="simulatedOrientationMetrics" orientation="landscapeRight"/>
+                    <connections>
+                        <outlet property="bkgView" destination="SIa-IW-bex" id="zLW-h2-Gcz"/>
+                        <outlet property="completedView" destination="FlE-fV-6ul" id="fNI-dN-8wR"/>
+                        <outlet property="tapToStartButton" destination="2Dr-qC-4ON" id="0lT-3f-WHr"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="D1J-Uj-YAB" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-541" y="828"/>
+        </scene>
+        <!--Game1 View Controller-->
+        <scene sceneID="ZJs-gT-dBA">
+            <objects>
+                <viewController storyboardIdentifier="Game1ViewController" useStoryboardIdentifierAsRestorationIdentifier="YES" id="aik-yR-X7y" customClass="Game1ViewController" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="MXg-8L-MM3"/>
+                        <viewControllerLayoutGuide type="bottom" id="xCo-MZ-RUD"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="JB3-S0-JLo">
+                        <rect key="frame" x="0.0" y="0.0" width="480" height="320"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <view contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="09U-pD-oiW">
+                                <rect key="frame" x="0.0" y="0.0" width="480" height="320"/>
+                                <subviews>
+                                    <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="i_bg_paris.png" translatesAutoresizingMaskIntoConstraints="NO" id="ROY-rv-wfg">
+                                        <rect key="frame" x="0.0" y="0.0" width="480" height="320"/>
+                                    </imageView>
+                                    <button opaque="NO" tag="10" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="z1w-fu-cYP">
+                                        <rect key="frame" x="263" y="18" width="206" height="98"/>
+                                        <state key="normal" image="i_easy.png">
+                                            <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                        </state>
+                                        <connections>
+                                            <action selector="onPlay:" destination="aik-yR-X7y" eventType="touchUpInside" id="nqy-ro-yQP"/>
+                                        </connections>
+                                    </button>
+                                    <button opaque="NO" tag="20" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="sYr-Lz-L89">
+                                        <rect key="frame" x="263" y="107" width="206" height="98"/>
+                                        <state key="normal" image="i_medium.png">
+                                            <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                        </state>
+                                        <connections>
+                                            <action selector="onPlay:" destination="aik-yR-X7y" eventType="touchUpInside" id="Q9R-VN-mc7"/>
+                                        </connections>
+                                    </button>
+                                    <button opaque="NO" tag="30" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="5Y2-Pd-4Ob">
+                                        <rect key="frame" x="263" y="202" width="206" height="98"/>
+                                        <state key="normal" image="i_hard.png">
+                                            <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                        </state>
+                                        <connections>
+                                            <action selector="onPlay:" destination="aik-yR-X7y" eventType="touchUpInside" id="Gmm-v0-z5x"/>
+                                        </connections>
+                                    </button>
+                                    <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Bml-g9-DmA">
+                                        <rect key="frame" x="30" y="224" width="102" height="64"/>
+                                        <state key="normal" image="i_back.png">
+                                            <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                        </state>
+                                        <connections>
+                                            <action selector="onBack:" destination="aik-yR-X7y" eventType="touchUpInside" id="opB-sn-Xi1"/>
+                                        </connections>
+                                    </button>
+                                    <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="i_match_title.png" translatesAutoresizingMaskIntoConstraints="NO" id="JOH-ti-sPJ">
+                                        <rect key="frame" x="34" y="25" width="166" height="63"/>
+                                    </imageView>
+                                    <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="i_match_tut.png" translatesAutoresizingMaskIntoConstraints="NO" id="vJf-c1-qu5">
+                                        <rect key="frame" x="53" y="140" width="128" height="34"/>
+                                    </imageView>
+                                    <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="rBI-PK-O6X">
+                                        <rect key="frame" x="11" y="9" width="20" height="20"/>
+                                        <state key="normal" image="i_sound_on.png">
+                                            <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                        </state>
+                                        <connections>
+                                            <action selector="onSound:" destination="aik-yR-X7y" eventType="touchUpInside" id="qni-Dy-FbC"/>
+                                        </connections>
+                                    </button>
+                                </subviews>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                            </view>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                    </view>
+                    <simulatedOrientationMetrics key="simulatedOrientationMetrics" orientation="landscapeRight"/>
+                    <simulatedScreenMetrics key="simulatedDestinationMetrics"/>
+                    <connections>
+                        <outlet property="mainView" destination="09U-pD-oiW" id="mS2-AZ-iY0"/>
+                        <outlet property="soundButton" destination="rBI-PK-O6X" id="fWH-bc-Ahd"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="rxU-LB-FV7" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-541" y="1254"/>
+        </scene>
+        <!--Memory Game View Controller-->
+        <scene sceneID="l2V-XF-lUB">
+            <objects>
+                <viewController storyboardIdentifier="MemoryGameController" useStoryboardIdentifierAsRestorationIdentifier="YES" id="iVf-AF-Xd0" customClass="MemoryGameViewController" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="Zxg-pT-01Q"/>
+                        <viewControllerLayoutGuide type="bottom" id="WXX-hT-Uay"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="TeJ-hG-5Yv">
+                        <rect key="frame" x="0.0" y="0.0" width="480" height="320"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <view contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="lp5-Km-hII">
+                                <rect key="frame" x="0.0" y="0.0" width="480" height="320"/>
+                                <subviews>
+                                    <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="i_bg_shibyua.png" translatesAutoresizingMaskIntoConstraints="NO" id="DEM-LQ-ccP">
+                                        <rect key="frame" x="0.0" y="0.0" width="480" height="320"/>
+                                    </imageView>
+                                    <button opaque="NO" tag="10" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="oCI-0l-0VX">
+                                        <rect key="frame" x="263" y="18" width="206" height="98"/>
+                                        <state key="normal" image="i_easy.png">
+                                            <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                        </state>
+                                        <connections>
+                                            <action selector="onPlay:" destination="iVf-AF-Xd0" eventType="touchUpInside" id="r2c-9m-Vlo"/>
+                                        </connections>
+                                    </button>
+                                    <button opaque="NO" tag="20" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="nbk-dD-cq9">
+                                        <rect key="frame" x="263" y="107" width="206" height="98"/>
+                                        <state key="normal" image="i_medium.png">
+                                            <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                        </state>
+                                        <connections>
+                                            <action selector="onPlay:" destination="iVf-AF-Xd0" eventType="touchUpInside" id="4cT-sn-Wi9"/>
+                                        </connections>
+                                    </button>
+                                    <button opaque="NO" tag="30" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="pmK-ze-Bmh">
+                                        <rect key="frame" x="263" y="202" width="206" height="98"/>
+                                        <state key="normal" image="i_hard.png">
+                                            <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                        </state>
+                                        <connections>
+                                            <action selector="onPlay:" destination="iVf-AF-Xd0" eventType="touchUpInside" id="yY0-ZD-AWA"/>
+                                        </connections>
+                                    </button>
+                                    <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Utf-fs-gfa">
+                                        <rect key="frame" x="30" y="224" width="102" height="64"/>
+                                        <state key="normal" image="i_back.png">
+                                            <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                        </state>
+                                        <connections>
+                                            <action selector="onBack:" destination="iVf-AF-Xd0" eventType="touchUpInside" id="EAp-5O-636"/>
+                                        </connections>
+                                    </button>
+                                    <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="i_memory_title.gif" translatesAutoresizingMaskIntoConstraints="NO" id="oQu-1t-Ndf">
+                                        <rect key="frame" x="25" y="25" width="172" height="68"/>
+                                    </imageView>
+                                    <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="i_memory_tut.png" translatesAutoresizingMaskIntoConstraints="NO" id="3hu-T3-mak">
+                                        <rect key="frame" x="47" y="140" width="128" height="34"/>
+                                    </imageView>
+                                    <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="a62-Cz-Gsq">
+                                        <rect key="frame" x="11" y="9" width="20" height="20"/>
+                                        <state key="normal" image="i_sound_on.png">
+                                            <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                        </state>
+                                        <connections>
+                                            <action selector="onSound:" destination="iVf-AF-Xd0" eventType="touchUpInside" id="PUn-85-jMr"/>
+                                        </connections>
+                                    </button>
+                                </subviews>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                            </view>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                    </view>
+                    <simulatedOrientationMetrics key="simulatedOrientationMetrics" orientation="landscapeRight"/>
+                    <simulatedScreenMetrics key="simulatedDestinationMetrics"/>
+                    <connections>
+                        <outlet property="mainView" destination="lp5-Km-hII" id="hlf-ma-hTD"/>
+                        <outlet property="soundButton" destination="a62-Cz-Gsq" id="1wJ-2h-49M"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="EUO-PA-4ui" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="613" y="1254"/>
+        </scene>
+        <!--Memory Game Play View Controller-->
+        <scene sceneID="C5m-w0-V5c">
+            <objects>
+                <viewController storyboardIdentifier="MemoryGamePlayViewController" id="H9r-6L-Xb4" customClass="MemoryGamePlayViewController" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="sgd-Hl-3LX"/>
+                        <viewControllerLayoutGuide type="bottom" id="iNP-lT-yyD"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="xfd-CV-0qi">
+                        <rect key="frame" x="0.0" y="0.0" width="480" height="320"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <view contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="Oaq-Up-VSx">
+                                <rect key="frame" x="0.0" y="0.0" width="480" height="320"/>
+                                <subviews>
+                                    <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="i_bg_shibuya_2.png" translatesAutoresizingMaskIntoConstraints="NO" id="GGg-RY-Jt2">
+                                        <rect key="frame" x="0.0" y="0.0" width="480" height="320"/>
+                                    </imageView>
+                                    <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="i_no_slash.gif" translatesAutoresizingMaskIntoConstraints="NO" id="ukz-n7-JIi">
+                                        <rect key="frame" x="434" y="19" width="8" height="15"/>
+                                    </imageView>
+                                    <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="i_no_0.gif" translatesAutoresizingMaskIntoConstraints="NO" id="zFc-Pm-ZqJ">
+                                        <rect key="frame" x="414" y="19" width="20" height="15"/>
+                                    </imageView>
+                                    <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="i_no_10.gif" translatesAutoresizingMaskIntoConstraints="NO" id="J3M-oO-fZb">
+                                        <rect key="frame" x="444" y="19" width="23" height="15"/>
+                                    </imageView>
+                                    <view contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="V5m-oq-nLX">
+                                        <rect key="frame" x="0.0" y="0.0" width="480" height="320"/>
+                                        <subviews>
+                                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="CjZ-Hp-DTM">
+                                                <rect key="frame" x="9" y="12" width="64" height="39"/>
+                                                <state key="normal" image="i_back.png">
+                                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                                </state>
+                                                <connections>
+                                                    <action selector="onBack:" destination="H9r-6L-Xb4" eventType="touchUpInside" id="hMa-Hm-fWX"/>
+                                                </connections>
+                                            </button>
+                                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="56h-h5-aYv">
+                                                <rect key="frame" x="83" y="22" width="20" height="20"/>
+                                                <state key="normal" image="i_sound_on.png">
+                                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                                </state>
+                                                <connections>
+                                                    <action selector="onSoundButton:" destination="H9r-6L-Xb4" eventType="touchUpInside" id="1Pc-Kl-glX"/>
+                                                </connections>
+                                            </button>
+                                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="kW2-f2-uX3">
+                                                <rect key="frame" x="98" y="80" width="63" height="71"/>
+                                            </imageView>
+                                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="GnO-VU-vOw">
+                                                <rect key="frame" x="150" y="11" width="180" height="15"/>
+                                            </imageView>
+                                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="d2C-qO-F6U">
+                                                <rect key="frame" x="150" y="25" width="180" height="15"/>
+                                            </imageView>
+                                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="oFL-2h-DVQ">
+                                                <rect key="frame" x="150" y="39" width="180" height="15"/>
+                                            </imageView>
+                                        </subviews>
+                                    </view>
+                                    <view hidden="YES" contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="y2g-cL-o0V">
+                                        <rect key="frame" x="0.0" y="0.0" width="480" height="320"/>
+                                        <subviews>
+                                            <view alpha="0.40000000596046448" contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="5dO-Ca-pcD">
+                                                <rect key="frame" x="0.0" y="0.0" width="480" height="320"/>
+                                                <color key="backgroundColor" white="0.0" alpha="1" colorSpace="calibratedWhite"/>
+                                            </view>
+                                            <view contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="axD-A3-Pq4">
+                                                <rect key="frame" x="122" y="104" width="235" height="112"/>
+                                                <subviews>
+                                                    <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="i_prize_box.png" translatesAutoresizingMaskIntoConstraints="NO" id="z8p-OF-DGa">
+                                                        <rect key="frame" x="0.0" y="0.0" width="235" height="112"/>
+                                                    </imageView>
+                                                    <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="fCm-rc-9ka">
+                                                        <rect key="frame" x="100" y="41" width="34" height="29"/>
+                                                    </imageView>
+                                                    <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="zHq-3d-HD4">
+                                                        <rect key="frame" x="37" y="87" width="61" height="13"/>
+                                                        <state key="normal">
+                                                            <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                                        </state>
+                                                        <connections>
+                                                            <action selector="onGoHome:" destination="H9r-6L-Xb4" eventType="touchUpInside" id="eYH-NP-2R4"/>
+                                                        </connections>
+                                                    </button>
+                                                    <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="hWm-Qw-jAe">
+                                                        <rect key="frame" x="126" y="87" width="86" height="13"/>
+                                                        <state key="normal">
+                                                            <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                                        </state>
+                                                        <connections>
+                                                            <action selector="onKeepPlaying:" destination="H9r-6L-Xb4" eventType="touchUpInside" id="S4Z-15-BqX"/>
+                                                        </connections>
+                                                    </button>
+                                                </subviews>
+                                                <color key="backgroundColor" red="0.039215686270000001" green="0.16078431369999999" blue="0.3921568627" alpha="1" colorSpace="calibratedRGB"/>
+                                            </view>
+                                        </subviews>
+                                    </view>
+                                </subviews>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                            </view>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                    </view>
+                    <simulatedOrientationMetrics key="simulatedOrientationMetrics" orientation="landscapeRight"/>
+                    <simulatedScreenMetrics key="simulatedDestinationMetrics"/>
+                    <connections>
+                        <outlet property="cardImage" destination="kW2-f2-uX3" id="jFQ-nb-m3c"/>
+                        <outlet property="completedImage" destination="y2g-cL-o0V" id="dUw-GC-bBM"/>
+                        <outlet property="currentScoreImageView" destination="zFc-Pm-ZqJ" id="9tb-oi-PVA"/>
+                        <outlet property="foodImage" destination="fCm-rc-9ka" id="Fk9-e1-4Zw"/>
+                        <outlet property="mainView" destination="Oaq-Up-VSx" id="uZ6-Wl-deI"/>
+                        <outlet property="nameCard1" destination="GnO-VU-vOw" id="B1E-0z-JMn"/>
+                        <outlet property="nameCard2" destination="oFL-2h-DVQ" id="jiC-pS-lhu"/>
+                        <outlet property="objectView" destination="V5m-oq-nLX" id="iuQ-cR-D91"/>
+                        <outlet property="soundButton" destination="56h-h5-aYv" id="Hw0-3Q-YWh"/>
+                        <outlet property="symbol" destination="d2C-qO-F6U" id="ea7-Dn-2bX"/>
+                        <outlet property="targetScoreImageView" destination="J3M-oO-fZb" id="haD-Az-MRZ"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="Jv3-qC-pyZ" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="613" y="1675"/>
+        </scene>
+        <!--Game1 Play View Controller-->
+        <scene sceneID="KDe-cd-2L1">
+            <objects>
+                <viewController storyboardIdentifier="Game1PlayViewController" useStoryboardIdentifierAsRestorationIdentifier="YES" id="M4P-QD-MCa" customClass="Game1PlayViewController" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="fAf-1r-4ff"/>
+                        <viewControllerLayoutGuide type="bottom" id="MFU-R8-xRe"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="tg5-FE-Ymz">
+                        <rect key="frame" x="0.0" y="0.0" width="480" height="320"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <view contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="ZRI-6z-biN">
+                                <rect key="frame" x="0.0" y="0.0" width="480" height="320"/>
+                                <subviews>
+                                    <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="i_bg_paris2.png" translatesAutoresizingMaskIntoConstraints="NO" id="uP9-Pc-8IV">
+                                        <rect key="frame" x="0.0" y="0.0" width="480" height="320"/>
+                                    </imageView>
+                                    <view contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="FNU-50-UfW">
+                                        <rect key="frame" x="200" y="117" width="80" height="85"/>
+                                    </view>
+                                    <view contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="qSF-G8-mYu">
+                                        <rect key="frame" x="0.0" y="0.0" width="480" height="320"/>
+                                        <subviews>
+                                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="kKh-82-Ucm">
+                                                <rect key="frame" x="9" y="12" width="64" height="39"/>
+                                                <state key="normal" image="i_back.png">
+                                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                                </state>
+                                                <connections>
+                                                    <action selector="onBack:" destination="M4P-QD-MCa" eventType="touchUpInside" id="1oW-00-3kQ"/>
+                                                </connections>
+                                            </button>
+                                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="FfN-a8-gQu">
+                                                <rect key="frame" x="83" y="22" width="20" height="20"/>
+                                                <state key="normal" image="i_sound_on.png">
+                                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                                </state>
+                                                <connections>
+                                                    <action selector="onSoundButton:" destination="M4P-QD-MCa" eventType="touchUpInside" id="Tw1-aM-VME"/>
+                                                </connections>
+                                            </button>
+                                            <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="o_mochi_hold_down.gif" translatesAutoresizingMaskIntoConstraints="NO" id="dBN-za-GDJ">
+                                                <rect key="frame" x="181" y="22" width="118" height="194"/>
+                                            </imageView>
+                                        </subviews>
+                                    </view>
+                                    <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="XEv-vP-k4q">
+                                        <rect key="frame" x="215" y="137" width="50" height="45"/>
+                                    </imageView>
+                                    <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="i_no_10.gif" translatesAutoresizingMaskIntoConstraints="NO" id="AD4-Nl-AwQ">
+                                        <rect key="frame" x="444" y="19" width="23" height="15"/>
+                                    </imageView>
+                                    <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="i_no_slash.gif" translatesAutoresizingMaskIntoConstraints="NO" id="RMb-o4-wzu">
+                                        <rect key="frame" x="434" y="19" width="8" height="15"/>
+                                    </imageView>
+                                    <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="i_no_0.gif" translatesAutoresizingMaskIntoConstraints="NO" id="VIt-fb-kxZ">
+                                        <rect key="frame" x="414" y="19" width="20" height="15"/>
+                                    </imageView>
+                                    <view hidden="YES" contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="9Y4-jm-Wgc">
+                                        <rect key="frame" x="0.0" y="0.0" width="480" height="320"/>
+                                        <subviews>
+                                            <view alpha="0.40000000596046448" contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="Wam-R5-ale">
+                                                <rect key="frame" x="0.0" y="0.0" width="480" height="320"/>
+                                                <color key="backgroundColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                            </view>
+                                            <view contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="eAy-I0-gAa">
+                                                <rect key="frame" x="123" y="104" width="235" height="112"/>
+                                                <subviews>
+                                                    <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="i_prize_box.png" translatesAutoresizingMaskIntoConstraints="NO" id="XsJ-0E-uwK">
+                                                        <rect key="frame" x="0.0" y="0.0" width="235" height="112"/>
+                                                    </imageView>
+                                                    <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="7au-aR-wbL">
+                                                        <rect key="frame" x="36" y="87" width="61" height="13"/>
+                                                        <state key="normal">
+                                                            <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                                        </state>
+                                                        <connections>
+                                                            <action selector="onGoHome:" destination="M4P-QD-MCa" eventType="touchUpInside" id="EoS-fk-Yfh"/>
+                                                        </connections>
+                                                    </button>
+                                                    <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="4qD-WN-scF">
+                                                        <rect key="frame" x="123" y="87" width="86" height="13"/>
+                                                        <state key="normal">
+                                                            <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                                        </state>
+                                                        <connections>
+                                                            <action selector="onKeepPlaying:" destination="M4P-QD-MCa" eventType="touchUpInside" id="nEI-ra-pu2"/>
+                                                        </connections>
+                                                    </button>
+                                                    <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="hPM-83-sMd">
+                                                        <rect key="frame" x="100" y="41" width="34" height="29"/>
+                                                    </imageView>
+                                                </subviews>
+                                            </view>
+                                        </subviews>
+                                    </view>
+                                </subviews>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                            </view>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                    </view>
+                    <simulatedOrientationMetrics key="simulatedOrientationMetrics" orientation="landscapeRight"/>
+                    <simulatedScreenMetrics key="simulatedDestinationMetrics"/>
+                    <connections>
+                        <outlet property="aObjectView" destination="qSF-G8-mYu" id="5q2-wa-9Tz"/>
+                        <outlet property="completedImage" destination="9Y4-jm-Wgc" id="fhA-LC-gbb"/>
+                        <outlet property="currentScoreImageView" destination="VIt-fb-kxZ" id="iQ9-EQ-n44"/>
+                        <outlet property="foodImage" destination="hPM-83-sMd" id="Ato-J7-RJe"/>
+                        <outlet property="mainView" destination="ZRI-6z-biN" id="S61-vE-aBt"/>
+                        <outlet property="panda" destination="dBN-za-GDJ" id="wIx-hO-EBp"/>
+                        <outlet property="qObjectImageView" destination="XEv-vP-k4q" id="94I-0x-ozk"/>
+                        <outlet property="soundButton" destination="FfN-a8-gQu" id="YXe-7f-3va"/>
+                        <outlet property="targetArea" destination="FNU-50-UfW" id="Ych-L3-lvU"/>
+                        <outlet property="totalScoreImageView" destination="AD4-Nl-AwQ" id="gEr-TF-7EB"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="qqa-9h-xc4" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-541" y="1675"/>
+        </scene>
+        <!--Story View Controller-->
+        <scene sceneID="Tdp-CJ-0Cm">
+            <objects>
+                <viewController storyboardIdentifier="storyview" useStoryboardIdentifierAsRestorationIdentifier="YES" id="8hp-kY-UaH" customClass="StoryViewController" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="X7W-F6-NDS"/>
+                        <viewControllerLayoutGuide type="bottom" id="pmq-62-GWz"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="H2G-Ks-wqh">
+                        <rect key="frame" x="0.0" y="0.0" width="480" height="320"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                    </view>
+                    <simulatedOrientationMetrics key="simulatedOrientationMetrics" orientation="landscapeRight"/>
+                    <simulatedScreenMetrics key="simulatedDestinationMetrics"/>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="xQq-B8-a2b" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-1130" y="1254"/>
+        </scene>
+        <!--Other View Controller-->
+        <scene sceneID="AAh-h8-dJV">
+            <objects>
+                <viewController storyboardIdentifier="screenyetcome" id="j3o-iY-mQz" customClass="OtherViewController" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="xBh-sg-n83"/>
+                        <viewControllerLayoutGuide type="bottom" id="0fw-4S-0yE"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="V7H-2S-LXi">
+                        <rect key="frame" x="0.0" y="0.0" width="480" height="320"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="82d-7k-kxd">
+                                <rect key="frame" x="0.0" y="0.0" width="480" height="320"/>
+                            </imageView>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                    </view>
+                    <simulatedOrientationMetrics key="simulatedOrientationMetrics" orientation="landscapeRight"/>
+                    <simulatedScreenMetrics key="simulatedDestinationMetrics"/>
+                    <connections>
+                        <outlet property="bgView" destination="82d-7k-kxd" id="8dG-3Q-mcG"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="X37-EY-0I6" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="613" y="828"/>
+        </scene>
+        <!--Game2 View Controller-->
+        <scene sceneID="Zcs-sB-1Ff">
+            <objects>
+                <viewController storyboardIdentifier="Game2ViewController" useStoryboardIdentifierAsRestorationIdentifier="YES" id="EAq-NY-Lef" customClass="Game2ViewController" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="mEg-bz-Hye"/>
+                        <viewControllerLayoutGuide type="bottom" id="McD-Jk-C2z"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="kye-wc-jGo">
+                        <rect key="frame" x="0.0" y="0.0" width="480" height="320"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <view contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="bgi-c2-sWX">
+                                <rect key="frame" x="0.0" y="0.0" width="480" height="320"/>
+                                <subviews>
+                                    <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="i_bg_sanfran.png" translatesAutoresizingMaskIntoConstraints="NO" id="PJY-ef-nWr">
+                                        <rect key="frame" x="0.0" y="0.0" width="480" height="320"/>
+                                    </imageView>
+                                    <button opaque="NO" tag="10" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="XJs-bf-s3O">
+                                        <rect key="frame" x="263" y="18" width="206" height="98"/>
+                                        <state key="normal" image="i_easy.png">
+                                            <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                        </state>
+                                        <connections>
+                                            <action selector="onPlay:" destination="EAq-NY-Lef" eventType="touchUpInside" id="VwI-fL-Ggz"/>
+                                        </connections>
+                                    </button>
+                                    <button opaque="NO" tag="20" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="cZp-p3-TdY">
+                                        <rect key="frame" x="263" y="107" width="206" height="98"/>
+                                        <state key="normal" image="i_medium.png">
+                                            <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                        </state>
+                                        <connections>
+                                            <action selector="onPlay:" destination="EAq-NY-Lef" eventType="touchUpInside" id="Ksm-eD-JAm"/>
+                                        </connections>
+                                    </button>
+                                    <button opaque="NO" tag="30" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="cdc-eC-a9h">
+                                        <rect key="frame" x="263" y="202" width="206" height="98"/>
+                                        <state key="normal" image="i_hard.png">
+                                            <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                        </state>
+                                        <connections>
+                                            <action selector="onPlay:" destination="EAq-NY-Lef" eventType="touchUpInside" id="47P-mq-NmW"/>
+                                        </connections>
+                                    </button>
+                                    <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="vzX-EG-kZB">
+                                        <rect key="frame" x="30" y="224" width="102" height="64"/>
+                                        <state key="normal" image="i_back.png">
+                                            <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                        </state>
+                                        <connections>
+                                            <action selector="onBack:" destination="EAq-NY-Lef" eventType="touchUpInside" id="gbO-aE-FnY"/>
+                                        </connections>
+                                    </button>
+                                    <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="i_spelling_title.gif" translatesAutoresizingMaskIntoConstraints="NO" id="m3k-45-SdF">
+                                        <rect key="frame" x="25" y="25" width="172" height="68"/>
+                                    </imageView>
+                                    <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="i_spell_tut.png" translatesAutoresizingMaskIntoConstraints="NO" id="0Wb-FC-er7">
+                                        <rect key="frame" x="31" y="140" width="160" height="34"/>
+                                    </imageView>
+                                    <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="8ht-Lx-jnn">
+                                        <rect key="frame" x="11" y="9" width="20" height="20"/>
+                                        <state key="normal" image="i_sound_on.png">
+                                            <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                        </state>
+                                        <connections>
+                                            <action selector="onSound:" destination="EAq-NY-Lef" eventType="touchUpInside" id="pn6-zF-Qjv"/>
+                                        </connections>
+                                    </button>
+                                </subviews>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                            </view>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                    </view>
+                    <simulatedOrientationMetrics key="simulatedOrientationMetrics" orientation="landscapeRight"/>
+                    <simulatedScreenMetrics key="simulatedDestinationMetrics"/>
+                    <connections>
+                        <outlet property="mainView" destination="bgi-c2-sWX" id="yld-bm-iQN"/>
+                        <outlet property="soundButton" destination="8ht-Lx-jnn" id="VgB-1F-OTa"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="DIe-dK-bMj" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="35" y="1254"/>
+        </scene>
+        <!--Game2 Play View Controller-->
+        <scene sceneID="gVb-qi-Bao">
+            <objects>
+                <viewController storyboardIdentifier="Game2PlayViewController" useStoryboardIdentifierAsRestorationIdentifier="YES" id="AEn-H9-KTS" customClass="Game2PlayViewController" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="hc2-4l-vAy"/>
+                        <viewControllerLayoutGuide type="bottom" id="mlq-Wk-kHB"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="n6F-9p-2Tj">
+                        <rect key="frame" x="0.0" y="0.0" width="480" height="320"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <view contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="JaR-gv-hxb">
+                                <rect key="frame" x="0.0" y="0.0" width="480" height="320"/>
+                                <subviews>
+                                    <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="mochi_sf background.png" translatesAutoresizingMaskIntoConstraints="NO" id="8vE-N0-xIr">
+                                        <rect key="frame" x="0.0" y="0.0" width="480" height="320"/>
+                                    </imageView>
+                                    <view contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="5d8-w2-oKH">
+                                        <rect key="frame" x="349" y="72" width="108" height="199"/>
+                                    </view>
+                                    <view contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="B32-4i-XYB">
+                                        <rect key="frame" x="0.0" y="0.0" width="480" height="320"/>
+                                        <subviews>
+                                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="8Cq-Qa-nmq">
+                                                <rect key="frame" x="9" y="12" width="64" height="39"/>
+                                                <state key="normal" image="i_back.png">
+                                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                                </state>
+                                                <connections>
+                                                    <action selector="onBack:" destination="AEn-H9-KTS" eventType="touchUpInside" id="O7V-tJ-pwz"/>
+                                                </connections>
+                                            </button>
+                                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="5Eo-cq-nVS">
+                                                <rect key="frame" x="83" y="22" width="20" height="20"/>
+                                                <state key="normal" image="i_sound_on.png">
+                                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                                </state>
+                                                <connections>
+                                                    <action selector="onSoundButton:" destination="AEn-H9-KTS" eventType="touchUpInside" id="fqy-g6-SWx"/>
+                                                </connections>
+                                            </button>
+                                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="a.png" translatesAutoresizingMaskIntoConstraints="NO" id="jy8-LO-dkz">
+                                                <rect key="frame" x="25" y="94" width="306" height="190"/>
+                                            </imageView>
+                                            <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="o_mochi_hold_down.gif" translatesAutoresizingMaskIntoConstraints="NO" id="5zF-Yv-sVr">
+                                                <rect key="frame" x="343" y="77" width="118" height="194"/>
+                                            </imageView>
+                                            <view contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="DuR-VI-sMh">
+                                                <rect key="frame" x="85" y="151" width="186" height="37"/>
+                                            </view>
+                                            <view contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="HeM-f9-Cnm">
+                                                <rect key="frame" x="85" y="205" width="186" height="37"/>
+                                            </view>
+                                        </subviews>
+                                    </view>
+                                    <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="x0T-Ig-ItN">
+                                        <rect key="frame" x="378" y="186" width="50" height="45"/>
+                                    </imageView>
+                                    <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="i_no_10.gif" translatesAutoresizingMaskIntoConstraints="NO" id="dXd-uV-kle">
+                                        <rect key="frame" x="444" y="19" width="23" height="15"/>
+                                    </imageView>
+                                    <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="i_no_slash.gif" translatesAutoresizingMaskIntoConstraints="NO" id="IGi-xD-rgJ">
+                                        <rect key="frame" x="434" y="19" width="8" height="15"/>
+                                    </imageView>
+                                    <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="i_no_0.gif" translatesAutoresizingMaskIntoConstraints="NO" id="BaC-JS-ygy">
+                                        <rect key="frame" x="414" y="19" width="20" height="15"/>
+                                    </imageView>
+                                    <imageView tag="101" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="o_a.png" translatesAutoresizingMaskIntoConstraints="NO" id="RCv-zO-ZUg">
+                                        <rect key="frame" x="106" y="211" width="19" height="26"/>
+                                    </imageView>
+                                    <imageView tag="102" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="o_a.png" translatesAutoresizingMaskIntoConstraints="NO" id="vHp-cg-xWl">
+                                        <rect key="frame" x="167" y="211" width="19" height="26"/>
+                                    </imageView>
+                                    <imageView tag="103" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="o_a.png" translatesAutoresizingMaskIntoConstraints="NO" id="7mG-Rn-5Oo">
+                                        <rect key="frame" x="229" y="211" width="19" height="26"/>
+                                    </imageView>
+                                    <view hidden="YES" contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="Uqb-qz-ipt">
+                                        <rect key="frame" x="0.0" y="0.0" width="480" height="320"/>
+                                        <subviews>
+                                            <view alpha="0.40000000596046448" contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="d2M-c1-GyN">
+                                                <rect key="frame" x="0.0" y="0.0" width="480" height="320"/>
+                                                <color key="backgroundColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                            </view>
+                                            <view contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="MuV-wT-ZzZ">
+                                                <rect key="frame" x="123" y="104" width="235" height="112"/>
+                                                <subviews>
+                                                    <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="i_prize_box.png" translatesAutoresizingMaskIntoConstraints="NO" id="LIg-3O-Md2">
+                                                        <rect key="frame" x="0.0" y="0.0" width="235" height="112"/>
+                                                    </imageView>
+                                                    <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="jsH-1c-yZJ">
+                                                        <rect key="frame" x="100" y="41" width="34" height="29"/>
+                                                    </imageView>
+                                                    <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="MMM-8s-iWM">
+                                                        <rect key="frame" x="125" y="87" width="86" height="13"/>
+                                                        <state key="normal">
+                                                            <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                                        </state>
+                                                        <connections>
+                                                            <action selector="onKeepPlaying:" destination="AEn-H9-KTS" eventType="touchUpInside" id="L1L-nq-8xd"/>
+                                                        </connections>
+                                                    </button>
+                                                    <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="1cC-6y-m4r">
+                                                        <rect key="frame" x="37" y="87" width="61" height="13"/>
+                                                        <state key="normal">
+                                                            <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                                        </state>
+                                                        <connections>
+                                                            <action selector="onGoHome:" destination="AEn-H9-KTS" eventType="touchUpInside" id="rXE-Lc-guY"/>
+                                                        </connections>
+                                                    </button>
+                                                </subviews>
+                                                <color key="backgroundColor" red="0.039215686270000001" green="0.16078431369999999" blue="0.3921568627" alpha="1" colorSpace="calibratedRGB"/>
+                                            </view>
+                                        </subviews>
+                                    </view>
+                                </subviews>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                            </view>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                    </view>
+                    <simulatedOrientationMetrics key="simulatedOrientationMetrics" orientation="landscapeRight"/>
+                    <simulatedScreenMetrics key="simulatedDestinationMetrics"/>
+                    <connections>
+                        <outlet property="aObjectView" destination="B32-4i-XYB" id="rcG-Jy-ccO"/>
+                        <outlet property="chooseLettersView" destination="HeM-f9-Cnm" id="kuo-jQ-Hwc"/>
+                        <outlet property="completedImage" destination="Uqb-qz-ipt" id="JeW-Cg-PuT"/>
+                        <outlet property="currentScoreImageView" destination="BaC-JS-ygy" id="1Ju-Fh-8ah"/>
+                        <outlet property="foodImage" destination="jsH-1c-yZJ" id="JfQ-xC-UiU"/>
+                        <outlet property="lettersView" destination="DuR-VI-sMh" id="jUD-eB-zpS"/>
+                        <outlet property="mainView" destination="JaR-gv-hxb" id="Wl5-MQ-JEm"/>
+                        <outlet property="panda" destination="5zF-Yv-sVr" id="qGb-gG-mnJ"/>
+                        <outlet property="qObjectImageView" destination="x0T-Ig-ItN" id="pSi-9w-ExZ"/>
+                        <outlet property="soundButton" destination="5Eo-cq-nVS" id="sfO-pk-09B"/>
+                        <outlet property="targetArea" destination="5d8-w2-oKH" id="XkO-O7-pYz"/>
+                        <outlet property="totalScoreImageView" destination="dXd-uV-kle" id="onE-eC-M1n"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="SRy-dy-WwH" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="35" y="1675"/>
+        </scene>
+        <!--Home Screen View Controller-->
+        <scene sceneID="z8z-1K-CIr">
+            <objects>
+                <viewController storyboardIdentifier="homescreen" useStoryboardIdentifierAsRestorationIdentifier="YES" id="u5F-wo-lIs" customClass="PGHomeScreenViewController" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="PsI-E7-aTX"/>
+                        <viewControllerLayoutGuide type="bottom" id="DPb-eI-h5K"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="a4u-xl-fcs">
+                        <rect key="frame" x="0.0" y="0.0" width="480" height="320"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <view contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="sAd-Lf-vTr">
+                                <rect key="frame" x="0.0" y="0.0" width="480" height="320"/>
+                                <subviews>
+                                    <imageView contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="i_bg_home_bamboo.png" translatesAutoresizingMaskIntoConstraints="NO" id="VaK-ot-UGp">
+                                        <rect key="frame" x="0.0" y="0.0" width="480" height="320"/>
+                                    </imageView>
+                                    <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="BSV-kW-zh2">
+                                        <rect key="frame" x="11" y="9" width="20" height="20"/>
+                                        <state key="normal" image="i_sound_on.png">
+                                            <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                        </state>
+                                        <connections>
+                                            <action selector="onSoundBtnClicked:" destination="u5F-wo-lIs" eventType="touchUpInside" id="2Cq-lb-ehf"/>
+                                        </connections>
+                                    </button>
+                                    <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="i_food_tray.png" translatesAutoresizingMaskIntoConstraints="NO" id="xsL-eb-cjW">
+                                        <rect key="frame" x="368" y="22" width="98" height="179"/>
+                                    </imageView>
+                                    <view contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="mCI-vL-EkO">
+                                        <rect key="frame" x="95" y="25" width="234" height="188"/>
+                                        <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+                                    </view>
+                                    <imageView contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="bnM-13-d1x">
+                                        <rect key="frame" x="108" y="30" width="210" height="180"/>
+                                    </imageView>
+                                    <imageView hidden="YES" tag="50" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="o_apple.png" translatesAutoresizingMaskIntoConstraints="NO" id="bUt-N0-qce" customClass="UIInventoryView">
+                                        <rect key="frame" x="190" y="58" width="47" height="43"/>
+                                    </imageView>
+                                    <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="i_energy_100.png" translatesAutoresizingMaskIntoConstraints="NO" id="vt3-kk-N30">
+                                        <rect key="frame" x="8" y="38" width="89" height="170"/>
+                                    </imageView>
+                                    <button opaque="NO" tag="1" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="pZx-4I-Ars">
+                                        <rect key="frame" x="37" y="221" width="60" height="53"/>
+                                        <state key="normal" image="i_navicon_match.png">
+                                            <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                        </state>
+                                        <connections>
+                                            <action selector="onButton1Clicked:" destination="u5F-wo-lIs" eventType="touchUpInside" id="u7m-yK-he6"/>
+                                        </connections>
+                                    </button>
+                                    <button opaque="NO" tag="2" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="yOI-RB-0dQ">
+                                        <rect key="frame" x="122" y="221" width="60" height="53"/>
+                                        <state key="normal" image="i_navicon_memory.png">
+                                            <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                        </state>
+                                        <connections>
+                                            <action selector="onButton2Clicked:" destination="u5F-wo-lIs" eventType="touchUpInside" id="ICb-I9-o38"/>
+                                        </connections>
+                                    </button>
+                                    <button opaque="NO" tag="3" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="PR5-gM-crC">
+                                        <rect key="frame" x="210" y="221" width="60" height="53"/>
+                                        <state key="normal" image="i_navicon_spell.png">
+                                            <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                        </state>
+                                        <connections>
+                                            <action selector="onButton3Clicked:" destination="u5F-wo-lIs" eventType="touchUpInside" id="Z2w-CT-YmP"/>
+                                        </connections>
+                                    </button>
+                                    <button opaque="NO" tag="4" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ANA-FK-f3k">
+                                        <rect key="frame" x="298" y="221" width="60" height="53"/>
+                                        <state key="normal" image="i_navicon_story.png">
+                                            <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                        </state>
+                                        <connections>
+                                            <action selector="onButton4Clicked:" destination="u5F-wo-lIs" eventType="touchUpInside" id="Abx-Ig-FGy"/>
+                                        </connections>
+                                    </button>
+                                    <button opaque="NO" tag="5" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Npw-oI-DUN">
+                                        <rect key="frame" x="387" y="221" width="60" height="53"/>
+                                        <state key="normal" image="i_navicon_upgrade.png">
+                                            <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                        </state>
+                                        <connections>
+                                            <action selector="onButtonClicked:" destination="u5F-wo-lIs" eventType="touchUpInside" id="PuR-dZ-zg3"/>
+                                        </connections>
+                                    </button>
+                                    <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Sfs-P8-c7J">
+                                        <rect key="frame" x="387" y="204" width="60" height="13"/>
+                                        <state key="normal" image="i_restore.png">
+                                            <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                        </state>
+                                    </button>
+                                    <imageView tag="990" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="o_apple.png" translatesAutoresizingMaskIntoConstraints="NO" id="Jq5-T2-12n" customClass="UIInventoryView">
+                                        <rect key="frame" x="394" y="30" width="47" height="43"/>
+                                    </imageView>
+                                    <imageView tag="991" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="o_apple.png" translatesAutoresizingMaskIntoConstraints="NO" id="jU9-Ew-bwT" customClass="UIInventoryView">
+                                        <rect key="frame" x="394" y="80" width="47" height="43"/>
+                                    </imageView>
+                                    <imageView tag="992" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="o_apple.png" translatesAutoresizingMaskIntoConstraints="NO" id="zgd-JU-NMo" customClass="UIInventoryView">
+                                        <rect key="frame" x="394" y="131" width="47" height="43"/>
+                                    </imageView>
+                                    <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="i_home_dialog_1.png" translatesAutoresizingMaskIntoConstraints="NO" id="gMv-4i-bRU">
+                                        <rect key="frame" x="86" y="9" width="309" height="14"/>
+                                    </imageView>
+                                    <view hidden="YES" contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="S1g-b4-hj4">
+                                        <rect key="frame" x="0.0" y="0.0" width="480" height="320"/>
+                                        <subviews>
+                                            <view alpha="0.40000000596046448" contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="2dx-qb-sy0">
+                                                <rect key="frame" x="0.0" y="0.0" width="480" height="320"/>
+                                                <color key="backgroundColor" white="0.0" alpha="1" colorSpace="calibratedWhite"/>
+                                            </view>
+                                            <view contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="QVl-9D-cyt">
+                                                <rect key="frame" x="128" y="128" width="225" height="63"/>
+                                                <subviews>
+                                                    <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="i_upgrade_thanks.png" translatesAutoresizingMaskIntoConstraints="NO" id="dsI-6h-Rgt">
+                                                        <rect key="frame" x="0.0" y="0.0" width="225" height="63"/>
+                                                    </imageView>
+                                                    <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ok4-3B-vYV">
+                                                        <rect key="frame" x="96" y="41" width="38" height="14"/>
+                                                        <state key="normal">
+                                                            <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                                        </state>
+                                                        <connections>
+                                                            <action selector="onButtonWelcome:" destination="u5F-wo-lIs" eventType="touchUpInside" id="dPB-DA-aD4"/>
+                                                        </connections>
+                                                    </button>
+                                                </subviews>
+                                            </view>
+                                        </subviews>
+                                    </view>
+                                    <view hidden="YES" contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="wXo-rM-eR4">
+                                        <rect key="frame" x="0.0" y="0.0" width="480" height="320"/>
+                                        <subviews>
+                                            <imageView userInteractionEnabled="NO" alpha="0.30000001192092896" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="i_bg_dance.gif" translatesAutoresizingMaskIntoConstraints="NO" id="Gn2-WM-ngL">
+                                                <rect key="frame" x="0.0" y="0.0" width="480" height="320"/>
+                                            </imageView>
+                                            <imageView userInteractionEnabled="NO" alpha="0.69999998807907104" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="THe-bo-eSm">
+                                                <rect key="frame" x="0.0" y="0.0" width="480" height="320"/>
+                                            </imageView>
+                                        </subviews>
+                                    </view>
+                                </subviews>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                            </view>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                    </view>
+                    <navigationItem key="navigationItem" id="CCe-0s-LFk"/>
+                    <simulatedOrientationMetrics key="simulatedOrientationMetrics" orientation="landscapeRight"/>
+                    <simulatedScreenMetrics key="simulatedDestinationMetrics"/>
+                    <connections>
+                        <outlet property="apple" destination="Jq5-T2-12n" id="Ks8-gK-mrf"/>
+                        <outlet property="backView" destination="sAd-Lf-vTr" id="T4B-7U-m7C"/>
+                        <outlet property="completedView" destination="S1g-b4-hj4" id="1be-Gc-1Om"/>
+                        <outlet property="dancingImageView" destination="THe-bo-eSm" id="eaS-sQ-cWd"/>
+                        <outlet property="dancingView" destination="wXo-rM-eR4" id="JXO-MK-yBA"/>
+                        <outlet property="energyImage" destination="vt3-kk-N30" id="m68-VM-33c"/>
+                        <outlet property="frontView" destination="mCI-vL-EkO" id="JnD-hB-ZQN"/>
+                        <outlet property="memoryGameButton" destination="yOI-RB-0dQ" id="6v3-eq-Wf2"/>
+                        <outlet property="messageView" destination="gMv-4i-bRU" id="rcB-fN-fFb"/>
+                        <outlet property="panda" destination="bnM-13-d1x" id="CyE-60-Tbz"/>
+                        <outlet property="rainbowImageView" destination="Gn2-WM-ngL" id="rEf-Uv-Pbf"/>
+                        <outlet property="soundButton" destination="BSV-kW-zh2" id="fc1-UQ-krC"/>
+                        <outlet property="spellGameButton" destination="PR5-gM-crC" id="VxQ-bM-yhL"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="ORx-bi-Iuo" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="35" y="828"/>
+        </scene>
+    </scenes>
+    <resources>
+        <image name="a.png" width="691" height="486"/>
+        <image name="i_back.png" width="324" height="226"/>
+        <image name="i_bg_dance.gif" width="1024" height="768"/>
+        <image name="i_bg_home_bamboo.png" width="1024" height="768"/>
+        <image name="i_bg_paris.png" width="1024" height="768"/>
+        <image name="i_bg_paris2.png" width="1024" height="768"/>
+        <image name="i_bg_sanfran.png" width="1024" height="768"/>
+        <image name="i_bg_shibuya_2.png" width="1024" height="768"/>
+        <image name="i_bg_shibyua.png" width="1024" height="768"/>
+        <image name="i_easy.png" width="457" height="230"/>
+        <image name="i_energy_100.png" width="199" height="453"/>
+        <image name="i_food_tray.png" width="199" height="453"/>
+        <image name="i_hard.png" width="462" height="226"/>
+        <image name="i_home_dialog_1.png" width="800" height="38"/>
+        <image name="i_match_title.png" width="367" height="153"/>
+        <image name="i_match_tut.png" width="327" height="90"/>
+        <image name="i_medium.png" width="453" height="223"/>
+        <image name="i_memory_title.gif" width="367" height="153"/>
+        <image name="i_memory_tut.png" width="366" height="85"/>
+        <image name="i_mochi_splash.png" width="1024" height="768"/>
+        <image name="i_navicon_match.png" width="128" height="128"/>
+        <image name="i_navicon_memory.png" width="128" height="128"/>
+        <image name="i_navicon_spell.png" width="128" height="128"/>
+        <image name="i_navicon_story.png" width="128" height="128"/>
+        <image name="i_navicon_upgrade.png" width="128" height="128"/>
+        <image name="i_no_0.gif" width="49" height="50"/>
+        <image name="i_no_10.gif" width="93" height="50"/>
+        <image name="i_no_slash.gif" width="44" height="68"/>
+        <image name="i_prize_box.png" width="706" height="386"/>
+        <image name="i_restore.png" width="127" height="33"/>
+        <image name="i_sound_on.png" width="48" height="48"/>
+        <image name="i_spell_tut.png" width="447" height="84"/>
+        <image name="i_spelling_title.gif" width="367" height="153"/>
+        <image name="i_story_guide.png" width="702" height="203"/>
+        <image name="i_tap.png" width="544" height="83"/>
+        <image name="i_upgrade_thanks.png" width="702" height="203"/>
+        <image name="mochi_sf background.png" width="4267" height="3200"/>
+        <image name="o_a.png" width="57" height="92"/>
+        <image name="o_apple.png" width="128" height="128"/>
+        <image name="o_mochi_hold_down.gif" width="246" height="512"/>
+    </resources>
+</document>
